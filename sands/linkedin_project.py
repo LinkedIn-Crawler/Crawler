@@ -1,4 +1,6 @@
 import csv
+import sys
+import fileinput
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.keys import Keys
@@ -25,7 +27,20 @@ sleep(3)
 driver.get('https://www.google.com/')
 sleep(3)
 search_input = driver.find_element_by_name('q')
-search_input.send_keys(parameters.search_query)
+beg = 'site:linkedin.com/in OR site:linkedin.com/pub -intitle:profiles -inurl:"/dir'
+print('Instructions:')
+print('Enter the Keywords you require one by one and then Press Enter')
+print('Enter -1 if you are done with your keywords')
+for line in sys.stdin:
+    if('-1' == line.rstrip()):
+        break
+    r1 = line.rstrip()
+    beg = beg + ' AND '
+    beg = beg +  '"{}"'.format(r1)
+    print('Enter the next keyword')
+    print('Enter -1 if you are done with your keywords')
+print(beg)
+search_input.send_keys(beg)
 sleep(0.5)
 search_input.send_keys(Keys.RETURN)
 sleep(3)
