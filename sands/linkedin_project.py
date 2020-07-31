@@ -40,7 +40,7 @@ for line in sys.stdin:
     print('Enter the next keyword')
     print('Enter -1 if you are done with your keywords')
 
-k = int(input('Enter the number of Profiles Required (between 1 to 100)'))
+k = int(input('Enter the number of Profiles Required (between 1 to 200)'))
 print('FINDING SUITABLE PROFILES.......')
 search_input.send_keys(beg)
 sleep(0.5)
@@ -77,7 +77,10 @@ while i<k:
             job_title = temp[0].strip()
         schools = sel.xpath('//*[contains(@class,"pv-entity__school-name")]/text()').extract()
         location =   sel.xpath('//*[@class="t-16 t-black t-normal inline-block"]/text()').extract_first().strip()
-        writer.writerow([i,name,job_title,schools,location,linkedin_url])
+        try:
+            writer.writerow([i,name,job_title,schools,location,linkedin_url])
+        except:
+            continue
         if i==k:
             break
     if i==k:
@@ -89,7 +92,7 @@ while i<k:
         clicker[0].click()
         sleep(2)
     else:
-        print('Required Number of profiles Not Found')
+        print('Number of profiles Does Not meet User Requirements')
         break;
     prev = driver.current_url
 driver.quit()
