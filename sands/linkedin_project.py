@@ -9,9 +9,11 @@ from parsel import Selector
 
 writer = csv.writer(open(parameters.result_file,'w'))
 writer.writerow(['Sl. No.','Name of the Candidate','Job Title','Schooling/Education','Current Location','Profile LinkedIn URL'])
+
 driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')
 driver.maximize_window()
 sleep(0.5)
+
 driver.get('https://www.linkedin.com/')
 sleep(2)
 driver.find_element_by_xpath('//a[text()="Sign in"]').click()
@@ -27,6 +29,8 @@ sleep(5)
 driver.get('https://www.google.com/')
 sleep(2)
 search_input = driver.find_element_by_name('q')
+
+
 beg = 'site:linkedin.com/in -intitle:profiles -inurl:"/dir'
 print('Instructions:')
 print('Enter the Keywords you require one by one and then Press Enter')
@@ -48,6 +52,7 @@ search_input.send_keys(Keys.RETURN)
 sleep(3)
 i = 0
 prev = driver.current_url
+
 while i<k:
     profiles = driver.find_elements_by_xpath('//*[@class="r"]/a[1]')
     profiles = [profile.get_attribute('href') for profile in profiles]
@@ -62,6 +67,7 @@ while i<k:
         if linkedin_url.find('linkedin') == -1:
             i = i-1
             continue
+
         sel = Selector(text=driver.page_source)
         name = sel.xpath('//title/text()').extract_first().split(' | ')[0].strip()
         if name[0]=='(':
@@ -70,13 +76,15 @@ while i<k:
         print('Scraping Profile of ' + name)
         temp = sel.xpath('//h2/text()').extract()
         sz = len(temp)
-        job_title  = '';
+        job_title = '';
+        
         if sz>=2:
              job_title = temp[1].strip()
         else:
             job_title = temp[0].strip()
+
         schools = sel.xpath('//*[contains(@class,"pv-entity__school-name")]/text()').extract()
-        location =   sel.xpath('//*[@class="t-16 t-black t-normal inline-block"]/text()').extract_first().strip()
+        location = sel.xpath('//*[@class="t-16 t-black t-normal inline-block"]/text()').extract_first().strip()
         try:
             writer.writerow([i,name,job_title,schools,location,linkedin_url])
         except:
@@ -85,6 +93,7 @@ while i<k:
             break
     if i==k:
         break
+
     driver.get(prev)
     sleep(2)
     clicker = driver.find_elements_by_xpath('//span[text()="Next"]')
@@ -94,5 +103,7 @@ while i<k:
     else:
         print('Number of profiles Does Not meet User Requirements')
         break;
+
     prev = driver.current_url
+    
 driver.quit()
