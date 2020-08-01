@@ -49,29 +49,46 @@ driver.get(url)
 sel = Selector(text=driver.page_source)
 sleep(3)
 
+for i in range(0,20):
+	start_year = i + 2000
+	end_year = i + 2000 + 1
+	
+	start = driver.find_element_by_xpath('//*[@id="people-search-year-start"]')
+	start.clear()
+	start.send_keys(start_year)
+	sleep(3)
+	end = driver.find_element_by_xpath('//*[@id="people-search-year-end"]')
+	end.clear()
+	end.send_keys(end_year)
+	sleep(1)
+	end.send_keys(Keys.RETURN)
+	sleep(5)
 
-sel1 = sel.xpath('//*[@class = "insight-container"]')
-for cont in sel1:
-	title = cont.xpath('.//h4/text()').extract_first().strip()
-	writer.writerow([title,"count"])
-	var1 = cont.xpath('.//strong/text()').extract()
-	var2 = cont.xpath('.//span/text()').extract()
-	var2[0] = var2[0].strip()
+
+
+
+# sel1 = sel.xpath('//*[@class = "insight-container"]')
+# for cont in sel1:
+# 	title = cont.xpath('.//h4/text()').extract_first().strip()
+# 	writer.writerow([title,"count"])
+# 	var1 = cont.xpath('.//strong/text()').extract()
+# 	var2 = cont.xpath('.//span/text()').extract()
+# 	var2[0] = var2[0].strip()
 	
-	if var2[0] == 'Add':
-		del var2[0]
+# 	if var2[0] == 'Add':
+# 		del var2[0]
 	
-	num = min(len(var1),len(var2))
+# 	num = min(len(var1),len(var2))
 	
-	for i in range(0,num):
-		var1[i] = var1[i].strip()
-		var2[i] = var2[i].strip()
-		if len(var1[i]) == 0:
-			var1[i] = "Not Specified"
-		if len(var2[i]) == 0:
-			var2[i] = "Not Specified"
-		writer.writerow([var2[i],var1[i]])
-	writer.writerow("\n")
+# 	for i in range(0,num):
+# 		var1[i] = var1[i].strip()
+# 		var2[i] = var2[i].strip()
+# 		if len(var1[i]) == 0:
+# 			var1[i] = "Not Specified"
+# 		if len(var2[i]) == 0:
+# 			var2[i] = "Not Specified"
+# 		writer.writerow([var2[i],var1[i]])
+# 	writer.writerow("\n")
 
 
 
