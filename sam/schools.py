@@ -7,6 +7,7 @@ from selenium.webdriver.common.keys import Keys
 import parameters
 from parsel import Selector
 
+writer = csv.writer(open(parameters.result_file,'w',newline=''))
 driver = webdriver.Chrome('/home/samay/chromedriver')
 driver.maximize_window()
 sleep(0.5)
@@ -45,5 +46,32 @@ sleep(3);
 
 url = driver.current_url + 'people/'
 driver.get(url)
-print(url)
+sel = Selector(text=driver.page_source)
+sleep(3)
+
+
+sel1 = sel.xpath('//*[@class = "insight-container"]')
+for cont in sel1:
+	title = cont.xpath('.//h4/text()').extract_first().strip()
+	writer.writerow([title,"count"])
+	var1 = cont.xpath('.//strong/text()').extract()
+	var2 = cont.xpath('.//span/text()').extract()
+	var2[0] = var2[0].strip()
+	
+	if var2[0] == 'Add':
+		del var2[0]
+	
+	num = min(len(var1),len(var2))
+	
+	for i in range(0,num):
+		var1[i] = var1[i].strip()
+		var2[i] = var2[i].strip()
+		if len(var1[i]) == 0:
+			var1[i] = "Not Specified"
+		if len(var2[i]) == 0:
+			var2[i] = "Not Specified"
+		writer.writerow([var2[i],var1[i]])
+	writer.writerow("\n")
+
+
 
