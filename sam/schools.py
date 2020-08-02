@@ -59,7 +59,6 @@ for i in range(0,20):
 	sleep(5)
 	sel1 = sel.xpath('.//*[@class = "insight-container"]')
 	sleep(3)
-	print(sel1)
 	for cont in sel1:
 		title = cont.xpath('.//h4/text()').extract_first().strip()
 		writer.writerow([start_year,title,"count"])
