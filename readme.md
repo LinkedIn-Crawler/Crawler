@@ -2,7 +2,7 @@
 
 
 Welcome to the LinkedIn Scraper.
-Instructions to Run the Software on a Local Commputer:
+Instructions to Run the Software on a Local Computer:
 
 Ensure that you have a Functional Text Editor(Atom,SublimeText,etc.) on your System
 
@@ -50,8 +50,8 @@ This Software requires you to provide your LinkedIn Credentials.
     5) Enter the Number of Profiles You need.
     6) The most relevant LinkedIn Profiles Data would be exported into a csv file(which can be renamed in parameters.py)
     7) Please refer to Search_Python-Developer_Delhi.csv for sample output File. 
-    Input: Keywords for Sample File: "Python Developer" "Delhi"
-    Input: Number of Profiles: 17
+    Sample Input: Keywords for Sample File: "Python Developer" "Delhi"
+    Sample Input: Number of Profiles: 17
 # ii) Connect
 
 
