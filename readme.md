@@ -1,4 +1,4 @@
-LinkedIn Crawler
+# LinkedIn Crawler
 
 
 Welcome to the LinkedIn Scraper.
@@ -6,13 +6,13 @@ Instructions to Run the Software on a Local Commputer:
 
 Ensure that you have a Functional Text Editor(Atom,SublimeText,etc.) on your System
 
-Download chromedriver.exe (Read all the rules on the official site before Installing)
+# Download chromedriver.exe (Read all the rules on the official site before Installing)
 
-Install Python
+# Install Python
 
-Install Selenium
+# Install Selenium
 
-Install Parsel
+# Install Parsel
 
 Wherever you see this command
 
@@ -32,14 +32,14 @@ driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')      [Windows]
 
 This Software requires you to provide your LinkedIn Credentials.
 
-Please update your Linked in username and Linked in Password in the parameters.py File.
+# Please update your Linked in username and Linked in Password in the parameters.py File.
 
 
-This Project includes 3 functionalities:
+# This Project includes 3 functionalities:
 
 
 
-i) Search
+# i) Search
 
 
     1) You can run linkedin_profile_search.py on your local Computer.
@@ -51,13 +51,13 @@ i) Search
     7) Please refer to Search_Python-Developer_Delhi.csv for sample output File. 
     Input: Keywords for Sample File: "Python Developer" "Delhi"
     Input: Number of Profiles: 17
-ii) Connect
+# ii) Connect
 
 
 
     Similar to above Search Functionality(File name is linkedin_profile_connect.py)
     Additional Feature: You would connect to all the people whose Profiles have been Scraped
-iii) Alumni Report Generation
+# iii) Alumni Report Generation
 
 
 
