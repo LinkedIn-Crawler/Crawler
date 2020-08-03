@@ -20,6 +20,7 @@ For example,
 
 
 driver = webdriver.Chrome('/home/samay/chromedriver')                 [UBUNTU]
+
 driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')      [Windows]
 
 
