@@ -33,7 +33,7 @@ driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')      [Windows]
 
 This Software requires you to provide your LinkedIn Credentials.
 
-# Update your LinkedIn username and Password in the parameters.py file.
+# Update your LinkedIn username and password in the parameters.py file.
 
 
 # This Project includes 3 functionalities:
