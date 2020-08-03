@@ -23,7 +23,12 @@ Please update your Linked in username and Linked in Password in the parameters.p
 
 
 This Project includes 3 functionalities:
+
+
+
 i) Search
+
+
     1) You can run linkedin_profile_search.py on your local Computer.
     2) Please Wait for a moment as the program runs
     3) Then, input the Keywords you would like to Search 
@@ -34,9 +39,16 @@ i) Search
     Input: Keywords for Sample File: "Python Developer" "Delhi"
     Input: Number of Profiles: 17
 ii) Connect
+
+
+
     Similar to above Search Functionality(File name is linkedin_profile_connect.py)
     Additional Feature: You would connect to all the people whose Profiles have been Scraped
 iii) Alumni Report Generation
+
+
+
+
     1) You can run alumni_yearwise_linkedIn.py on your local Computer.
     2) Please Wait for a moment as the program runs
     3) Then, input the Institute Name. All data relating to the The Alumni of the Institute would be Scraped. 
