@@ -1,4 +1,4 @@
-# LinkedIn Crawler Instructions
+# LinkedIn Crawler Usage Instructions
 
 
 Welcome to the LinkedIn Scraper.
