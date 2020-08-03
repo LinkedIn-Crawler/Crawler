@@ -1,4 +1,4 @@
-# LinkedIn Crawler
+# LinkedIn Crawler Instructions
 
 
 Welcome to the LinkedIn Scraper.
@@ -6,7 +6,7 @@ Instructions to Run the Software on a Local Commputer:
 
 Ensure that you have a Functional Text Editor(Atom,SublimeText,etc.) on your System
 
-# Download chromedriver.exe 
+# Install chromedriver.exe 
 (Read all the rules on the official site before Installing)
 
 # Install Python
