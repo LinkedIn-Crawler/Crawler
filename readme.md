@@ -6,7 +6,8 @@ Instructions to Run the Software on a Local Commputer:
 
 Ensure that you have a Functional Text Editor(Atom,SublimeText,etc.) on your System
 
-# Download chromedriver.exe (Read all the rules on the official site before Installing)
+# Download chromedriver.exe 
+(Read all the rules on the official site before Installing)
 
 # Install Python
 
