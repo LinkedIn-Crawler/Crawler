@@ -11,12 +11,17 @@ Install Selenium
 Install Parsel
 
 Wherever you see this command
+
 driver = webdriver.Chrome('SAMPLE/PATH')
+
 in the Python Files, 
 replace 'SAMPLE/PATH' with the location of the ChromeDriver.exe on your Local System
 For example,
+
+
 driver = webdriver.Chrome('/home/samay/chromedriver')                 [UBUNTU]
 driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')      [Windows]
+
 
 This Software requires you to provide your LinkedIn Credentials.
 Please update your Linked in username and Linked in Password in the parameters.py File.
