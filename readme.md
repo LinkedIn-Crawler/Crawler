@@ -5,9 +5,13 @@ Welcome to the LinkedIn Scraper.
 Instructions to Run the Software on a Local Commputer:
 
 Ensure that you have a Functional Text Editor(Atom,SublimeText,etc.) on your System
+
 Download chromedriver.exe (Read all the rules on the official site before Installing)
+
 Install Python
+
 Install Selenium
+
 Install Parsel
 
 Wherever you see this command
@@ -15,7 +19,9 @@ Wherever you see this command
 driver = webdriver.Chrome('SAMPLE/PATH')
 
 in the Python Files, 
+
 replace 'SAMPLE/PATH' with the location of the ChromeDriver.exe on your Local System
+
 For example,
 
 
@@ -25,6 +31,7 @@ driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')      [Windows]
 
 
 This Software requires you to provide your LinkedIn Credentials.
+
 Please update your Linked in username and Linked in Password in the parameters.py File.
 
 
