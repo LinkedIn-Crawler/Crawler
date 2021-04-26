@@ -1,4 +1,4 @@
-# LinkedIn Crawler Usage Instructions
+# LinkedIn Crawler Instructions
 
 Welcome to the LinkedIn Scraper.
 
@@ -10,15 +10,13 @@ Welcome to the LinkedIn Scraper.
 - Install Selenium
 - Install Parsel
 
-### Some Other Instructions
+### Some Other Instructions:
 
-Wherever you see this command
+Wherever you see this command - 
 
 driver = webdriver.Chrome('SAMPLE/PATH')
 
-in the Python Files, 
-
-replace 'SAMPLE/PATH' with the location of the ChromeDriver.exe on your Local System
+in the Python Files, replace 'SAMPLE/PATH' with the location of the ChromeDriver.exe on your Local System
 
 For example,
 
