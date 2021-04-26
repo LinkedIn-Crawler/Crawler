@@ -13,17 +13,22 @@ Welcome to the LinkedIn Scraper.
 ### Some Other Instructions
 
 Wherever you see this command
+
 driver = webdriver.Chrome('SAMPLE/PATH')
+
 in the Python Files, 
+
 replace 'SAMPLE/PATH' with the location of the ChromeDriver.exe on your Local System
 
 For example,
+
 driver = webdriver.Chrome('/home/samay/chromedriver')                 [UBUNTU]
+
 driver = webdriver.Chrome('C:/Users/saisa/Desktop/chromedriver')      [Windows]
 
 #### This Software requires you to provide your LinkedIn Credentials.
 
-### Update your LinkedIn username and password in the parameters.py file.
+#### Update your LinkedIn username and password in the parameters.py file.
 
 
 ## This Project includes 3 functionalities:
