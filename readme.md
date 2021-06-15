@@ -1,6 +1,6 @@
 # LinkedIn Crawler Instructions
 
-Welcome to the LinkedIn Scraper.
+Welcome to the Linked-In Scraper.
 
 ## Instructions to Run the Software on a Local Computer:
 
